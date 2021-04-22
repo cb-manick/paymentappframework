@@ -14,7 +14,6 @@ public class HelloFunctionTest {
     public void shouldReturnGreeting() {
         testing.givenEvent().enqueue();
         testing.thenRun(HelloFunction.class, "handleRequest");
-
         FnResult result = testing.getOnlyResult();
         assertEquals("Hello, world!", result.getBodyAsString());
     }
