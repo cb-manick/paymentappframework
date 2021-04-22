@@ -16,3 +16,6 @@
 # Build
 
    fn build
+
+#Inspect - Invocation endpoint
+fn inspect function paymentappstripe paymentappframework
