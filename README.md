@@ -18,4 +18,7 @@
    fn build
 
 #Inspect - Invocation endpoint
-fn inspect function paymentappstripe paymentappframework
+    fn inspect function paymentappstripe paymentappframework
+
+#Invoke using curl
+    curl -X POST http://localhost:8080/t/paymentappstripe/paymentappframework
