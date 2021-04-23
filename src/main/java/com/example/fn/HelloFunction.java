@@ -1,12 +1,14 @@
 package com.example.fn;
 
+import com.fnproject.fn.api.httpgateway.HTTPGatewayContext;
+
 public class HelloFunction {
 
-    public String handleRequest(String input) {
-        String name = (input == null || input.isEmpty()) ? "world"  : input;
+    // HTTPGatewayContext context,
+    public Message handleRequest(HTTPGatewayContext context,Message input) {
 
-        System.out.println("Inside Java Hello World function"); 
-        return "Hello, " + name + "!";
+        String name = (input == null || input.getMessage().isEmpty()) ? "world"  : input.getMessage();
+        return new Message("hello" + ", " + name + "!");
     }
 
 }
